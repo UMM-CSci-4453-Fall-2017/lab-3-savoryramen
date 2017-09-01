@@ -1,1 +1,8 @@
 Group members: Shawn Saliyev, Philip Blaskowski and Adam Casey.
+
+One of the things we will need to keep track of when making a Point-Of-Sale system is a unique id. Every item in the system needs to have a unique id so it can be referred to. Different types of products should also have seperate tables so that we can keep track of each individual products information with fields that are relevant for that particular product. 
+
+User interaction:
+* User should be able to get the item from the database;
+* The database shoould be able to update itself to stay up to date;
+* User should be able to the cancel purchase and return item back to database;
