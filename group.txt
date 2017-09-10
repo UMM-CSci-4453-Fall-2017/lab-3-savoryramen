@@ -1,0 +1,3 @@
+Group members: Shawn Saliyev, Philip Blaskowski, Adam Casey.
+Group name: savoryramen
+Database's name: institutional_casey
