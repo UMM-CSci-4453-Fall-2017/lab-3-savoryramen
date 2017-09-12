@@ -1,1 +1,18 @@
+Inventory will be kept track of with a unique id and a quantity describing how many of the item are left and also a price.
+The system should keep track of different vendors because different vendors might have different quantities and different prices for the same items.
+The system should keep track of the people working the tills so that we can see what happened when a particular person was working the till.
+The system should keep track of how long an interaction takes place so that we can know if our tables are set up in an efficient manner.
+The system should try to help with upselling because cashiers can be forgetful and a reminder might be helpful.
+For items sold by unit the system should have a price per unit that it keeps track of.
+For items sold by volume the system should have a price per a specific volume and the amount that will be entered will be multiplied by that to calculate the price for that specific amount of the item.
+Ideally the system will automatically recognize that items belonging to a combo deal have been placed in the till and will either automatically apply the price change or prompt the cashier to apply the price change (in case there is an error in the combo deals)
+Ideally the system will automatically recognize items belonging to a sale have been placed in the till and will either automatically apply the price change or prompt the cashier to apply the price change (in case there is an error in the definition of a sale)
+The system should be able to keep track of promotions and implement them to prices for items in tills properly.
+The system should be able to keep track of coupons. If a user enters a relevant coupon that is not expired they will get the relevant discount.
+If a user requests a refund they should be be able to get their money back. This means that the system needs to keep track of each transaction so the customer can get there money back.
+The system should be able to handle mistakes in some reasonable way, weather that be deleting incorrect transactions or editing them in retrospect. 
+The till should be able to operate without the local network. This could work if a till has it’s own information retrieved from the database and if the network goes down it simply waits to update the database information until the network comes back up. 
+Sales should be stored on the till so that sales can still be made without a local network. This means price data as well. Quantities should not be stored on the till so that we don’t run into mismatches in item counts across tills.
+
+
 
