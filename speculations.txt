@@ -1,18 +1,28 @@
 Inventory will be kept track of with a unique id and a quantity describing how many of the item are left and also a price.
-The system should keep track of different vendors because different vendors might have different quantities and different prices for the same items.
-The system should keep track of the people working the tills so that we can see what happened when a particular person was working the till.
+The system should keep track of different vendors because different vendors might have different quantities and different prices for the 
+same items.
+The system should keep track of the people working the tills so that we can see what happened when a particular person was working the 
+till. For example if someone gives too much change away we should know how much money should be in the till and how much there actually is 
+in the till at the end of the day
 The system should keep track of how long an interaction takes place so that we can know if our tables are set up in an efficient manner.
-The system should try to help with upselling because cashiers can be forgetful and a reminder might be helpful.
-For items sold by unit the system should have a price per unit that it keeps track of.
-For items sold by volume the system should have a price per a specific volume and the amount that will be entered will be multiplied by that to calculate the price for that specific amount of the item.
-Ideally the system will automatically recognize that items belonging to a combo deal have been placed in the till and will either automatically apply the price change or prompt the cashier to apply the price change (in case there is an error in the combo deals)
-Ideally the system will automatically recognize items belonging to a sale have been placed in the till and will either automatically apply the price change or prompt the cashier to apply the price change (in case there is an error in the definition of a sale)
-The system should be able to keep track of promotions and implement them to prices for items in tills properly.
-The system should be able to keep track of coupons. If a user enters a relevant coupon that is not expired they will get the relevant discount.
-If a user requests a refund they should be be able to get their money back. This means that the system needs to keep track of each transaction so the customer can get there money back.
-The system should be able to handle mistakes in some reasonable way, weather that be deleting incorrect transactions or editing them in retrospect. 
-The till should be able to operate without the local network. This could work if a till has it’s own information retrieved from the database and if the network goes down it simply waits to update the database information until the network comes back up. 
-Sales should be stored on the till so that sales can still be made without a local network. This means price data as well. Quantities should not be stored on the till so that we don’t run into mismatches in item counts across tills.
+The system should try to help with upselling because cashiers can forget about certain things that would get the store more money. For 
+example if a customer buys a certain food item it would be more benificial for the cashier to ask "Would you like a drink with that?" or 
+"Would that be all or would you like that as a combo?", those kinds of small questions can make the store more money overtime
+There should be a price per unit of the item being sold already in the system. Like one burger should be $1.99
+For items sold by volume the system should have a price per a specific volume. A 14oz drink cup will $.99 or something like that
+Idealy the system will automatically recognize that items belonging to a combo deal, and the order gets change automatically. Or there is 
+a button the cashier can press to make a certain food item into a meal. So this means combos should either be tracked or the system knows 
+what goes in a combo so when a button is pressed the system just adds it to the current item.
+The system should keep track of sale items and promotional items by a seperate column that asks if that item is part of a sale or a 
+promotion so when that certain item is inputed into the order get updated automatically. This also eliminates human error because if the 
+order gets updated automatically the cashier doesn't have to worry about it.
+There should be a seperate coupon table for single item coupons and combo coupons. All the coupons have a unique id and there is a column 
+with either the item or combo id so the system knows what the coupon is for
+When a refund happens the refund amount should be subtracted from the total amount of money that till made.
+Mistakes should be taken care of by the crew of that vendor, so the crew adds and subtracts money from the system
+Tills in a vendor should be connected but tills from different vendors shouldn't be connected this way if the system goes down tills can 
+still operate normally. Coupons and organization wide promotions should be stored on the server. And sales and things that are specific to 
+vendors (such as food items, and vendor specific promotions) should be stored in the tills themselves.
 
 
 
